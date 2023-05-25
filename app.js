@@ -1,9 +1,10 @@
 const express=require('express');
+const path=express('path')
 const bodyParser=require('body-parser')
 
 const app=express();
-const adminRouter=require('./routes/message');
-const shopRouter=require('./routes/login')
+const adminRouter=require('./newRoutes/admin');
+const shopRouter=require('./newRoutes/shop')
 
 app.use(bodyParser.urlencoded({extended:false}));
 
@@ -11,6 +12,7 @@ app.use(adminRouter);
 app.use(shopRouter);
 
 
-
-
-app.listen(1000)
+app.use((req, res, next)=>{
+    res.status(404).sendFile(path.join(__dirname, 'view', '404.html'))
+})
+app.listen(1111)

@@ -14,5 +14,14 @@
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "nodemon": "^2.0.22"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joinabhi/ExpressFiles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joinabhi/ExpressFiles/issues"
+  },
+  "homepage": "https://github.com/joinabhi/ExpressFiles#readme"
 }
