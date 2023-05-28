@@ -11,6 +11,16 @@ exports.getAddProducts=(req, res, next)=>{
         activeAddProduct:true
     })
 };
+exports.getProducts = (req, res, next)=>{
+    const prodId=req.params.productId;
+    product.findById(prodId, product=>{
+       res.render('shop/product-detail',{
+        product:product,
+        pageTitle:product.title
+       })
+    })
+    res.redirect('/');
+}
 
 exports.postAddProducts=(req, res, next)=>{
    const product=new Product(req.body.title);
